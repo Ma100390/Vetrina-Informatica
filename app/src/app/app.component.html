@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Breve descrizione del tuo sito per i motori di ricerca">
+    <meta name="keywords" content="parole chiave, correlate, al, tuo, contenuto">
+    <meta name="author" content="Magini Manuel">
+    <title>Il Tuo Sito Web - Benvenuto</title>
+</head>
+
+<body>
+    <ngx-spinner ><div class="la-pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div> </ngx-spinner>
+    <div class="container">
+        <header>
+            <div class="sticky slide-in-fwd-center">
+                <img class="logo" src="assets/Senzanome.svg" alt="Designer" style="max-width: 100%;" height="200">
+                <div class="line">&nbsp;</div>
+                <div class="cssanimation danceBottom">
+                    <h1>Progettazione & Sviluppo Sistemi Web</h1>
+                </div>
+
+                <span>di Magini Manuel </span>
+            </div>
+        </header>
+
+
+        <div class="main-content" #mainContent [class.card-visita]="isCardVisitaRoute$ | async"
+            [class.video]="isVideoRoute$ | async">
+            <div>
+                <app-menu></app-menu>
+                <router-outlet></router-outlet>
+
+            </div>
+
+
+
+
+
+
+            <section class="sfondo-sezione">
+                <h2>Contattami</h2>
+                <div class="contatto">
+                    <!-- Aggiungi un modulo di contatto o informazioni per essere raggiunto -->
+                    <p>Hai domande o desideri parlare dei tuoi progetti? Sarò felice di sentirti!</p>
+                    <a href="mailto:magini15@gmail.com">Inviami un'email</a>
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2023 Il Tuo Sito Web. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+
+</html>

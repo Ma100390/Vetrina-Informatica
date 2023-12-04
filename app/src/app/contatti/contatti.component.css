@@ -1,0 +1,107 @@
+/* contatti.component.css */
+.shadow-drop-center {
+	-webkit-animation: shadow-drop-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes shadow-drop-center {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 20px 0px rgba(233, 12, 12, 0.904);
+            box-shadow: 0 0 20px 0px rgba(185, 21, 21, 0.884);
+  }
+}
+@keyframes shadow-drop-center {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 20px 0px rgba(130, 226, 4, 0.938);
+            box-shadow: 0 0 20px 0px rgba(70, 206, 16, 0.979);
+  }
+}
+label{
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+
+.contact-section {
+    background-color: #f5f5f5ad;
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .conferma-messaggio {
+    background-color: #4caf50; /* Colore di sfondo verde */
+    color: white; /* Colore del testo bianco */
+    padding: 10px; /* Spaziatura interna */
+    border-radius: 4px; /* Bordo arrotondato */
+    margin-top: 10px; /* Spazio superiore */
+    font-size: 16px; /* Dimensione del testo */
+    margin-bottom: 20px;
+  }
+  
+  /* Stile per l'animazione di dissolvenza */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .conferma-messaggio.fade-out {
+    animation: fadeOut 15s ease; /* Animazione di dissolvenza di 2 secondi */
+  }

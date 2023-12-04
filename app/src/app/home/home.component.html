@@ -1,0 +1,71 @@
+<!-- Presentazione Aziendale -->
+<section class="scale-in-hor-center">
+    <div >
+        <h2 >Benvenuto su Vetrina Informatica</h2>
+        <p>Portiamo il tuo business online al livello successivo con soluzioni web su misura. Scopri come possiamo
+            elevare la tua presenza digitale:</p>
+    </div>
+
+</section>
+
+<!-- Vantaggi dei Nostri Servizi -->
+<section class="scale-in-hor-center">
+
+    <div class="vetrina-container">
+        <h2>I Vantaggi di Scegliere Vetrina Informatica</h2>
+        <p class="intro">
+            La tua vetrina online è la prima impressione che i clienti avranno della tua attività. La cura nei dettagli
+            e la presentazione accattivante dei tuoi prodotti o servizi sono la chiave per catturare l'attenzione e
+            generare interesse.
+        </p>
+        <div class="separatore"></div>
+
+        <app-carosello></app-carosello>
+
+    </div>
+</section>
+
+<!-- Servizi di Grafica -->
+<section>
+    <div id="vetrina">
+        <div class="container">
+            <h2>Servizi di Grafica</h2>
+            <p>Offriamo servizi di grafica creativa per migliorare la tua presenza visiva. Dai un'occhiata a ciò che
+                possiamo fare:</p>
+            <ul>
+                <li><strong>Progettazione di Loghi:</strong> Creiamo loghi unici che riflettono l'identità del tuo
+                    marchio.
+                </li>
+                <li><strong>Biglietti da Visita Personalizzati:</strong> Realizziamo biglietti da visita unici con QR
+                    code
+                    per un'interazione avanzata.</li>
+            </ul>
+        </div>
+        <div class="quadrato"><img src="assets/code.gif" alt="Descrizione dell'immagine"> </div>
+        <h3> Contattaci per ulteriori dettagli e preventivi personalizzati.</h3>
+    </div>
+
+</section>
+
+<!-- Video di Presentazione -->
+<section>
+    <div>
+        <h2>Scopri i Nostri Servizi Web</h2>
+        <ol>
+            <li>- Analisi e Pianificazione</li>
+            <li>- Progettazione</li>
+            <li>- Sviluppo Front-end</li>
+            <li>- Sviluppo Back-end</li>
+            <li>- Analisi SEO</li>
+            <li>- Test e QA</li>
+            <li>- Strategia di Marketing</li>
+            <li>- Sicurezza</li>
+            <li>- Deploy e Manutenzione</li>
+        </ol>
+        <div class="line"></div>
+        <video #fullscreenVideo preload="auto" (click)="toggleFullScreen()" autoplay muted loop>
+            <source [src]="videoUrl" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+    </div>
+</section>

@@ -1,0 +1,185 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: #251E1E;
+  
+  margin-right: 1%;
+  
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height:300px;
+}
+
+.card {
+  position: relative;
+  z-index: 1; /* Assegna uno z-index predefinito per tutte le carte */
+  flex: 0 0 92%;
+  opacity: 0.5;
+  transition: transform 0.5s ease-in-out;
+  box-sizing: border-box;
+  padding: 1%;
+  color: #dacbcb;
+  border-left:2px solid #414040 ;
+  border-right:2px solid #3d3b3b ;
+}
+
+
+p.card-text{
+  font-family: 'Roboto Mono', monospace;
+  padding: 2%;
+}
+p.card-counter{
+  margin-bottom: 30px;
+  font-family: 'Roboto Mono', monospace;
+}
+.card.center {
+  opacity: 1;
+  z-index: 2;
+  border-radius: 1%;
+  background-color: #622A85;
+  
+  color: rgb(230, 230, 34);
+  /* margin: 15%; */ /* Rimuovi o riduci questo margine */
+  -webkit-animation: jello-diagonal-2 0.8s both;
+  animation: jello-diagonal-2 0.8s both;
+}
+.spazio {
+  border-top: 5px solid #00000091; /* Linea orizzontale con colore nero */
+  margin: 10px 0; /* Margine sopra e sotto la linea */
+}
+#freccia{
+  max-width: 100%;
+  height: auto;
+  
+}
+#freccia1{
+  max-width: 100%;
+  height: auto;
+  transform: rotate(180deg);
+}
+button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+  border:2px solid rgb(0, 0, 0);
+}
+
+.card-content {
+  position: relative;
+  justify-content: space-between;
+  
+  word-spacing: 5px;
+  text-indent: 3px;
+
+  letter-spacing: 1px;
+  
+  border-radius: 5px;
+}
+.centrale{
+  display: grid;
+  grid-template-columns: repeat(2, 10%);
+  gap: 80%;
+  margin-top: 25px;
+  
+}
+@media screen and (max-width: 768px) {
+  .carousel {
+    flex-wrap: nowrap;
+    
+
+    padding: 2%;
+  }
+
+  .card {
+    flex: 0 0 200px;
+    margin: 0 auto 10px auto;
+    max-width: calc(100% - 20px);
+    box-sizing: border-box; /* Aggiungi questa riga per evitare il taglio sul lato destro */
+  }
+
+  .card.isVisible {
+    display: flex;
+    margin: 10px;
+    transform: scale(1);
+  }
+
+  .centrale {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #F8F877;
+    color: black;
+    border: none;
+    border-radius: 5px;
+  }
+
+ 
+}
+
+@-webkit-keyframes jello-diagonal-2 {
+  0% {
+    -webkit-transform: skew(0deg 0deg);
+            transform: skew(0deg 0deg);
+  }
+  30% {
+    -webkit-transform: skew(-25deg -25deg);
+            transform: skew(-25deg -25deg);
+  }
+  40% {
+    -webkit-transform: skew(15deg, 15deg);
+            transform: skew(15deg, 15deg);
+  }
+  50% {
+    -webkit-transform: skew(-15deg, -15deg);
+            transform: skew(-15deg, -15deg);
+  }
+  65% {
+    -webkit-transform: skew(5deg, 5deg);
+            transform: skew(5deg, 5deg);
+  }
+  75% {
+    -webkit-transform: skew(-5deg, -5deg);
+            transform: skew(-5deg, -5deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg 0deg);
+            transform: skew(0deg 0deg);
+  }
+}
+@keyframes jello-diagonal-2 {
+  0% {
+    -webkit-transform: skew(0deg 0deg);
+            transform: skew(0deg 0deg);
+  }
+  30% {
+    -webkit-transform: skew(-25deg -25deg);
+            transform: skew(-25deg -25deg);
+  }
+  40% {
+    -webkit-transform: skew(15deg, 15deg);
+            transform: skew(15deg, 15deg);
+  }
+  50% {
+    -webkit-transform: skew(-15deg, -15deg);
+            transform: skew(-15deg, -15deg);
+  }
+  65% {
+    -webkit-transform: skew(5deg, 5deg);
+            transform: skew(5deg, 5deg);
+  }
+  75% {
+    -webkit-transform: skew(-5deg, -5deg);
+            transform: skew(-5deg, -5deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg 0deg);
+            transform: skew(0deg 0deg);
+  }
+}

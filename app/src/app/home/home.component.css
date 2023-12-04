@@ -1,0 +1,249 @@
+/* Stili globali */
+.scale-in-hor-center {
+	-webkit-animation: scale-in-hor-center 10s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  
+/* Stili per la sezione "Contenuti Principali" */
+section {
+    background: linear-gradient(45deg, 
+    rgba(164, 206, 38, 0.733) 0%,             
+    #473b3abd 25%,            
+    #7a2ac5bb 25%,            
+    #6523a270 50%,           
+    #705e5ea2 50%,            
+    #4f4849ad 75%,            
+    #291d1db9 100%            
+  );
+      padding: 40px;
+    max-width: 700px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-family: 'Nova Square', sans-serif;
+    color: #F8F877;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.separatore {
+    border-top: 2px solid rgba(12, 12, 12, 0.11);
+    margin: 20px 0;
+}
+p,li{
+    font-family: 'Lato', sans-serif;
+}
+
+
+section p {
+    color: #F8F877;
+    font-size: 16px;
+    line-height: 1.6;
+    
+}
+
+.vetrina-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vetrina-container li {
+    margin: 10px 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.vetrina-container li strong {
+    color: #F8F877;
+}
+
+.vetrina-container h3 {
+    color: #ffff46;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: medium;
+}
+
+section video {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili per l'ultima sezione "Testimonianze" */
+section div:last-child {
+    background-color: #251e1ebd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(71, 22, 33, 0.4);
+   
+}
+
+section div:last-child h2 {
+    color: #F87789;
+    
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+section div:last-child p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 15px;
+    font-style: italic;
+    display: inline; /* Assicura che lo sfondo si applichi solo al testo */
+    position: relative; /* Per garantire che lo sfondo venga visualizzato correttamente */
+
+    /* Applica l'immagine di sfondo con la sfumatura desiderata */
+    background: linear-gradient(45deg, #af9c30, #fdfdfb) no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Rende il testo trasparente in modo che lo sfondo sia visibile */
+
+    /* Aggiungi uno shadow simile a una sfumatura */
+    
+}
+.prossimo {
+    border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 2% 2% 7% 2%;
+        max-width: none;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .vetrina-container h3 {
+        font-size: small;
+    }
+
+    section video {
+        height: 400px;
+    }
+
+    section div:last-child {
+        padding: 20px;
+    }
+
+    section div:last-child h2 {
+        font-size: 24px;
+    }
+
+    section div:last-child p {
+        font-size: 16px;
+    }
+}
+/* Stili per la sezione "Servizi di Grafica" */
+#vetrina {
+    display: flex;
+    flex-direction: column; /* Cambiato il layout a colonna */
+    align-items: center;
+    
+    padding: 40px; /* Aggiunto spazio interno */
+}
+
+.quadrato {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    background: linear-gradient(45deg, #e72b2b, #ffffff);
+    animation: cambiaColore 4000ms infinite;
+    border-radius: 10px;
+    box-shadow: 0 10px 100px rgba(223, 8, 169, 0.973);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.container h2,
+.container p,
+.container ul {
+    margin-bottom: 10px;
+}
+
+.container li {
+    color:#F87789;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container li strong {
+    color: #F8F877;
+}
+
+ h3 {
+    margin-top: 10px;
+    color: #F8F877;
+    font-size: 16px;
+}
+
+/* Animazione per il cambio di colore */
+@keyframes cambiaColore {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+/* Stili per la sezione "Video di Presentazione" */
+section ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+section li {
+    color: #F8F877;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+video {
+    margin-top: 80px;
+}
+
+/* Stili globali per le linee di separazione */
+.line {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}

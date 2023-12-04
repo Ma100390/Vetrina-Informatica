@@ -1,0 +1,21 @@
+<div class="carousel-container">
+  <div class="carousel" [ngStyle]="{'transform': 'translateX(' + (-currentIndex * cardWidth) + '%)'}">
+    <div *ngFor="let card of cards; let i = index" class="card" [ngClass]="{'center': i === currentIndex, 'visible': card.isVisible}">
+      <div class="card-content">
+        <p class="card-counter">{{ i + 1 }}/{{ cards.length }}</p>
+        <img *ngIf="card.imagePath" [src]="card.imagePath" alt="Card Image">
+        <div class="spazio"></div>
+        <p [innerHTML]="formatCardContent(card.content)" class="card-text"></p>
+      </div>
+      <div class="spazio"></div>
+    </div>
+  </div>
+</div>
+<div class="centrale">
+  <button (click)="prevSlide()">
+    <img id="freccia1" src="assets/freccia.gif" alt="Designer">
+  </button>
+  <button (click)="nextSlide()">
+    <img id="freccia" src="assets/freccia.gif" alt="Designer">
+  </button>
+</div>

@@ -1,0 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+  ul {
+    list-style-type: none; /* Rimuove i punti elenco */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 2px solid white; /* Aggiunge un bordo inferiore */
+  }
+  
+  li {
+    float: left; /* Allinea gli elementi in orizzontale */
+
+  }
+  
+  li a {
+    display: block;
+    color: white; /* Colore del testo */
+    text-align: center;
+    padding: 14px 16px; /* Spaziatura interna */
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  li:hover {
+    border-bottom-color: #555; /* Cambia il colore del bordo al passaggio del mouse */
+  }
+  
+  @media (max-width: 768px) {
+    ul {
+        padding: 5%;
+       
+    }
+  }
