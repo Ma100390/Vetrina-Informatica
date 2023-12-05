@@ -245,7 +245,6 @@ footer {
     padding: 10px;
     border: none;
     cursor: pointer;
-    
 }
 .menu:hover .dropdown-menu {
     display: block;
