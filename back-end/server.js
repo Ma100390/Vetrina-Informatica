@@ -1,11 +1,13 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const path = require('path');
 const app = express();
-const port = 3000;  // Puoi scegliere la porta che preferisci
+const port = process.env.PORT || 3000;
 require('dotenv').config();
 
 // Middleware per consentire la comunicazione con il front-end
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'dist/app')));
 
 // Configura il trasportatore Nodemailer (sostituisci con le tue informazioni)
 const transporter = nodemailer.createTransport({
@@ -25,7 +27,7 @@ app.post('/invia-email', (req, res) => {
 
   // Rimuovi i caratteri speciali dal testo utilizzando una regex
   const testoPulito = testo.replace(/[^\w\s.,!?'"()]+/g, '');
-  
+
   const mailOptions = {
     from: email,
     to: process.env.EMAIL_USER,
@@ -38,10 +40,14 @@ app.post('/invia-email', (req, res) => {
       console.error('Errore durante l\'invio dell\'email:', error);
       return res.status(500).json({ error: 'Errore durante l\'invio dell\'email.' });
     }
-    
-    res.status(200).json({ message: 'Email inviata con successo', response: info.response });
 
+    res.status(200).json({ message: 'Email inviata con successo', response: info.response });
   });
+});
+
+// Route per gestire il routing di Angular
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/app/index.html'));
 });
 
 // Avvia il server sulla porta specificata
