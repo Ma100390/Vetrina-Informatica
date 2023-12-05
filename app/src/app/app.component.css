@@ -247,24 +247,20 @@ footer {
     cursor: pointer;
     
 }
-
 .menu:hover .dropdown-menu {
     display: block;
 }
-
 @media screen and (max-width: 768px) {
     .main-content {
         padding: 2px;
         width: 100%;
     }
 }
-
 @media screen and (max-width: 420px) and (orientation: portrait) {
     .main-content {
         flex: 1;
     }
 }
-
 @media screen and (max-width: 1020px) {
     header {
         width: 100%;
